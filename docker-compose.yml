@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+
+  model-access:
+    build: model_api
+    hostname: model_api
+    container_name: model_api
+    volumes:
+      - ./model_api/:/app
+    ports:
+      - "5010:5010"
+    depends_on:
+      - postgres-db
+#    restart: always
+
+  database-access:
+    build: database_api
+    hostname: database_api
+    container_name: database_api
+    volumes:
+      - ./database_api/:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres-db
+#    restart: always
+
+  postgres-db:
+    build: tba_database
+    hostname: tba_database
+    container_name: tba_database
+    environment:
+      POSTGRES_DB: TBAuction
+      POSTGRES_USER: tbauction
+      POSTGRES_PASSWORD: lop34sw@D
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432" # Specific port to use this Postgres instance in my Raspberry PI
+    restart: always
+
+

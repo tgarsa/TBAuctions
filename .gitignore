@@ -160,7 +160,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
-# Ignore the data folder. Contain the data saved into the database
+# Ignore the data folder. Contain the data saved into the tba_database
 data
 
 # MacOs files
