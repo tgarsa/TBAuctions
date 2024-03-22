@@ -15,7 +15,7 @@ CREATE TABLE predictions (
        prev_bid_value REAL NOT NULL,
        prev_bid_value_avg REAL NOT NULL,
        bid_value_delta  REAL NOT NULL,
-       prediction DECIMAL NOT NULL,
+       prediction REAL NOT NULL,
        model_version VARCHAR NOT NULL,
        created_at TIMESTAMP NOT NULL
 );
