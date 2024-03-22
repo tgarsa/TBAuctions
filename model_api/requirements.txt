@@ -9,5 +9,6 @@ typing_extensions
 python-multipart
 python-jose[cryptography]
 passlib[bcrypt]
+# To use the model
 scikit-learn
 xgboost

@@ -1,6 +1,6 @@
 # The necessary imports
 import xgboost as xgb
-from sklearn.model_selection import KFold
+# from sklearn.model_selection import KFold
 
 
 def get_prediction(df):
